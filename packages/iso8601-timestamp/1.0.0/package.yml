@@ -1,0 +1,17 @@
+matches:
+  # Rust's chrono does not support UTC ISO-8601 timestamps from format alone, only current timezone.
+  - trigger: ":utc"
+    replace: "{{utciso}}"
+    vars:
+      - name: utciso
+        type: shell
+        params:
+          cmd: python3 -c "from datetime import datetime, timezone; print(datetime.now(timezone.utc).isoformat())"
+  # Just grab the chrono one, local timezone.
+  - trigger: ":iso"
+    replace: "{{iso}}"
+    vars:
+      - name: iso
+        type: date
+        params:
+          format: "%+"

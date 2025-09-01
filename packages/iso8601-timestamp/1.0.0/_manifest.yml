@@ -1,0 +1,15 @@
+name: iso8601-utc
+title: ISO-8601 Timestamps (w/ UTC)
+description: Generate ISO-8601 timestamps, either in UTC or your local timezone.
+version: "1.0.0"
+author: Arylen
+homepage: "https://github.com/Arylen/espanso-iso8601-timestamp"
+tags: [
+  "timestamp",
+  "time",
+  "date",
+  "utc",
+  "iso",
+  "iso-8601",
+  "8601"
+]
